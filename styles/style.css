@@ -1,8 +1,21 @@
+p {  
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+}
+
+address{  
+  font-style: normal;
+}
+
 .header {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   width: 1052px;
-  height: 105px;
   margin: auto;
   margin-top: 92px;
 }
@@ -13,8 +26,8 @@
 
 .header__links-list {
   display: flex;
-  gap: 32px;
-  margin: auto;
+  gap: 10px;
+  margin-top: 12px;
   margin-left: 27px;
   text-transform: lowercase;
   list-style-type: circle;
@@ -22,13 +35,11 @@
 }
 
 .header__links-list-item {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.13px;
-  text-align: left;
-  text-decoration-skip-ink: none;
-  text-underline-position: from-font;
+  list-style-position: inside;
 }
 
 .header__links-list .no-bullet {
@@ -40,7 +51,7 @@
   text-underline-offset: 2px;
 }
 
-.header__link_active {
+.header__link.active {
   text-decoration: none;
 }
 
@@ -48,6 +59,7 @@
   justify-self: center;
   margin: auto;
 }
+
 .header__logo-image {
   width: 139px;
 }
@@ -60,39 +72,51 @@
 .address {
   display: grid;
   gap: 2px;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 21.13px;
+  line-height: 24.13px;
   text-align: left;
   text-decoration-skip-ink: none;
   text-underline-position: from-font;
 }
 
+.address p {
+  display: grid;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20.3px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
 .cover {
   position: relative;
   width: 100%;
-  height: 757px;
+  min-height: 757px;
   margin-top: 96px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  z-index: -2;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
 
 .cover__title {
   width: 1000px;
-  height: 355px;
   margin: auto;
-  margin-top: 165px;
+  padding-top: 165px;
   color: white;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 100px;
   line-height: 125px;
@@ -135,11 +159,22 @@
 }
 
 .cover__description {
-  position: absolute;
-  bottom: 51px;
+  margin-top: 115px;
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+
+.cover__description-text span.whitespace {
+  letter-spacing: 0.9em;
+}
+
+.cover__description-text span.whitespace-medium {
+  letter-spacing: 0.8em;
+}
+
+.cover__description-text span.letter {
+  letter-spacing: 1.1em;
 }
 
 .cover__description-text {
@@ -147,36 +182,10 @@
   margin: auto;
   margin-left: 78px;
   color: white;
-  font-family: Raleway;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 28px;
-  text-align: left;
-  text-decoration-skip-ink: none;
-  text-underline-position: from-font;
   text-transform: uppercase;
-}
-
-.cover__description-text span.whitespace {
-  font-family: Raleway;
-  font-weight: 400;
   font-size: 22px;
-  line-height: 28px;
-  letter-spacing: 0.9em;
-  text-align: left;
-  text-decoration-skip-ink: none;
-  text-underline-position: from-font;
-}
-
-.cover__description-text span.letter {
-  font-family: Raleway;
   font-weight: 400;
-  font-size: 22px;
   line-height: 28px;
-  letter-spacing: 1.1em;
-  text-align: left;
-  text-decoration-skip-ink: none;
-  text-underline-position: from-font;
 }
 
 .bet-button {
@@ -186,7 +195,7 @@
   border: 1px white solid;
   padding: 12px 31px;
   color: white;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 500;
   font-size: 22px;
   line-height: 25.83px;
@@ -212,7 +221,7 @@
 
 .lots__heading {
   margin-left: 40px;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 46.96px;
@@ -232,15 +241,21 @@
 .card-link {
   display: block;
   width: 334px;
-  height: 563px;
+  min-height: 563px;
 }
 
 .card {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 563px;
   background-position: center;
   background-size: cover;
+  z-index: -2 ;
+}
+
+.card__overlay {
+  display: grid;
+  grid-template-rows: auto;
 }
 
 .card_type_film {
@@ -260,7 +275,7 @@
   margin: auto;
   margin-top: 51px;
   color: white;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 22px;
   line-height: 26.4px;
@@ -273,12 +288,12 @@
 }
 
 .card__text {
-  position: absolute;
-  bottom: 48px;
-  left: 40px;
+  justify-self: end;
+  margin: auto;
+  margin-bottom: 48px;
   width: 254px;
   color: white;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -293,7 +308,7 @@
   margin-top: 30px;
   margin-left: 40px;
   border-bottom: 1px black solid;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 23.48px;
@@ -332,7 +347,7 @@
 
 .about__title {
   margin-top: 136px;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 46.96px;
@@ -346,14 +361,19 @@
   display: grid;
   gap: 24px;
   margin-top: 100px;
-  font-family: Raleway;
+  font-size: 18px;
   font-weight: 400;
+}
+
+.about__text p {
+  font-family: Raleway;
   font-size: 20px;
+  font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0em;
   text-align: left;
-  text-decoration-skip-ink: none;
   text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
 .footer {
@@ -367,8 +387,8 @@
 }
 
 .footer__menu {
-  margin: auto;
   text-align: center;
+  align-self: flex-start;
 }
 
 .footer__menu-list {
@@ -377,7 +397,7 @@
 
 .footer__menu-list-item {
   align-self: flex-start;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.13px;
@@ -391,7 +411,7 @@
   text-underline-offset: 2px;
 }
 
-.footer__menu-link-active {
+.footer__menu-link.active {
   text-decoration: none;
 }
 
