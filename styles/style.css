@@ -2,7 +2,7 @@
   margin: auto;
   margin-top: 92px;
   display: grid;
-  grid-template-columns: 4fr 1fr 4fr;
+  grid-template-columns: 2fr 1fr 2fr;
   width: 1052px;
   height: 105px;
 }
@@ -12,10 +12,13 @@
 }
 
 .header__links-list {
+  margin: auto;
+  margin-left: 27px;
   display: flex;
   gap: 32px;
   list-style-type: circle;
   text-transform: lowercase;
+  white-space: nowrap;
 }
 
 .header__links-list-item {
@@ -43,11 +46,20 @@
 
 .header__logo {
   margin: auto;
+  justify-self: center;
+}
+.header__logo-image {
+  width: 139px;
 }
 
 .header__address {
   margin: auto;
-  margin-right: 25px;
+  margin-right: 60px;
+}
+
+.address {
+  display: grid;
+  gap: 2px;
   font-family: Raleway;
   font-size: 18px;
   font-weight: 400;
@@ -71,7 +83,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover__title {
@@ -82,7 +94,7 @@
   font-family: Raleway;
   font-size: 100px;
   font-weight: 700;
-  line-height: 115px;
+  line-height: 125px;
   letter-spacing: 0.3em;
   text-align: left;
   text-underline-position: from-font;
@@ -91,7 +103,7 @@
   color: white;
 }
 
-.cover__title h1 {  
+.cover__title h1 {
   font-size: 100px;
 }
 
@@ -153,7 +165,7 @@
   letter-spacing: 0.9em;
   text-align: left;
   text-underline-position: from-font;
-  text-decoration-skip-ink: none;  
+  text-decoration-skip-ink: none;
 }
 
 .cover__description-text span.letter {
@@ -231,15 +243,15 @@
   background-position: center;
 }
 
-.card_type_film {  
+.card_type_film {
   background-image: url(../images/card-lot-01.jpg);
 }
 
-.card_type_book {  
+.card_type_book {
   background-image: url(../images/card-lot-02.jpg);
 }
 
-.card_type_picture {  
+.card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -260,7 +272,7 @@
   color: white;
 }
 
-.card__text{
+.card__text {
   position: absolute;
   bottom: 48px;
   left: 40px;
@@ -298,11 +310,13 @@
   margin-top: 146px;
   display: grid;
   grid-template-columns: 334px 1fr;
+  gap: 25px;
   width: 1052px;
 }
 
 .about__logo {
   margin: auto;
+  margin-top: 35px;
   display: flex;
   width: 240px;
   height: 240px;
@@ -360,6 +374,7 @@
 }
 
 .footer__menu-list-item {
+  align-self: flex-start;
   font-family: Raleway;
   font-size: 18px;
   font-weight: 400;
