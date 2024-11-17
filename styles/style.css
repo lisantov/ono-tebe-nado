@@ -83,7 +83,7 @@ address {
 
 .address p {
   display: grid;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 20.3px;
@@ -94,7 +94,7 @@ address {
 
 .cover {
   position: relative;
-  z-index: -2;
+  z-index: 1;
   width: 100%;
   min-height: 757px;
   margin-top: 96px;
@@ -107,11 +107,12 @@ address {
 .overlay {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover__title {
+  position: relative;
   width: 1000px;
   margin: auto;
   padding-top: 165px;
@@ -125,6 +126,7 @@ address {
   text-decoration-skip-ink: none;
   text-underline-position: from-font;
   text-transform: uppercase;
+  z-index: 2;
 }
 
 .cover__title h1 {
@@ -159,10 +161,12 @@ address {
 }
 
 .cover__description {
+  position: relative;
   display: flex;
   justify-content: space-around;
   width: 100%;
   margin-top: 115px;
+  z-index: 2;
 }
 
 .cover__description-text span.whitespace {
@@ -246,16 +250,13 @@ address {
 
 .card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   z-index: -2;
   width: 100%;
   min-height: 563px;
   background-position: center;
   background-size: cover;
-}
-
-.card__overlay {
-  display: grid;
-  grid-template-rows: auto;
 }
 
 .card_type_film {
@@ -271,6 +272,7 @@ address {
 }
 
 .card__title {
+  position: relative;
   width: 254px;
   margin: auto;
   margin-top: 51px;
@@ -285,21 +287,19 @@ address {
   text-decoration-skip-ink: none;
   text-underline-position: from-font;
   text-transform: uppercase;
+  z-index: 2;
 }
 
 .card__text {
-  justify-self: end;
+  position: relative;
   width: 254px;
   margin: auto;
-  margin-bottom: 48px;
+  margin-bottom: 45px;
   color: white;
-  font-family: Raleway, sans-serif;
-  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  text-align: left;
-  text-decoration-skip-ink: none;
-  text-underline-position: from-font;
+  text-decoration: none;
+  z-index: 2;
 }
 
 .lots__look-more-link {
@@ -366,7 +366,7 @@ address {
 }
 
 .about__text p {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
