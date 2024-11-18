@@ -135,20 +135,20 @@ address {
 
 .aligned-text {
   display: block;
-  text-align: left;
   line-height: 115px;
+  text-align: left;
 }
 
 .aligned-text-center {
   display: block;
-  text-align: center;
   line-height: 140px;
+  text-align: center;
 }
 
 .aligned-text-right {
   display: block;
-  text-align: right;
   line-height: 100px;
+  text-align: right;
 }
 
 .letter-spacing-extended {
